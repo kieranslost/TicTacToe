@@ -121,28 +121,24 @@ public class iconSet {
                 return false;
             }
 
-            if(array[0][0].equals(turnLetter) && array[0][1].equals(turnLetter) && array[0][2].equals(turnLetter)){
-                printWinner(x);
-                return false;
-            } else if(array[1][0].equals(turnLetter) && array[1][1].equals(turnLetter) && array[1][2].equals(turnLetter)){
-                printWinner(x);
-                return false;
-            } else if(array[2][0].equals(turnLetter) && array[2][1].equals(turnLetter) && array[2][2].equals(turnLetter)){
-                printWinner(x);
-                return false;
-            } else if(array[0][0].equals(turnLetter) && array[1][1].equals(turnLetter) && array[2][2].equals(turnLetter)){
+            for(int i = 0; i < 3; i++){
+                if(array[i][0].equals(turnLetter) && array[i][1].equals(turnLetter) && array[i][2].equals(turnLetter)){
+                    printWinner(x);
+                    return false;
+                }
+            }
+
+            for(int i = 0; i < 3; i++){
+                if(array[0][i].equals(turnLetter) && array[1][i].equals(turnLetter) && array[2][i].equals(turnLetter)){
+                    printWinner(x);
+                    return false;
+                }
+            }
+
+            if(array[0][0].equals(turnLetter) && array[1][1].equals(turnLetter) && array[2][2].equals(turnLetter)){
                 printWinner(x);
                 return false;
             } else if(array[2][0].equals(turnLetter) && array[1][1].equals(turnLetter) && array[0][2].equals(turnLetter)){
-                printWinner(x);
-                return false;
-            } else if(array[0][0].equals(turnLetter) && array[1][0].equals(turnLetter) && array[2][0].equals(turnLetter)){
-                printWinner(x);
-                return false;
-            } else if(array[0][1].equals(turnLetter) && array[1][1].equals(turnLetter) && array[2][1].equals(turnLetter)){
-                printWinner(x);
-                return false;
-            } else if(array[0][2].equals(turnLetter) && array[1][2].equals(turnLetter) && array[2][2].equals(turnLetter)){
                 printWinner(x);
                 return false;
             }
